@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  height: calc(100vh - 70px - 50px);
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #bddeff 25%,
+      transparent 25%,
+      transparent 75%,
+      #bddeff 75%,
+      #bddeff
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #bddeff 25%,
+      #cee7ff 25%,
+      #cee7ff 75%,
+      #bddeff 75%,
+      #bddeff
+    );
+  background-position: 0 0, 22px 22px;
+  background-size: 44px 44px;
+}

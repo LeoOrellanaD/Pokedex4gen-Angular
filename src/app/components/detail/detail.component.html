@@ -1,0 +1,26 @@
+<div class="tag">
+  <div class="pokeball"></div>
+  <span class="name">{{ formattedId() }}</span>
+  <span class="name">{{ pokemon.name }}</span>
+</div>
+<div class="types">
+  <div
+    class="type"
+    [style.background-color]="getTypeColor(pokemon.types[0].type.name)"
+  >
+    <span>{{ pokemon.types[0].type.name }}</span>
+  </div>
+
+  @if (pokemon.types.length > 1) {
+  <div
+    class="type"
+    [style.background-color]="getTypeColor(pokemon.types[1].type.name)"
+  >
+    <span>{{ pokemon.types[1].type.name }}</span>
+  </div>
+  }
+</div>
+<div class="measures">
+  <span> ALT. &nbsp; &nbsp; {{pokemon.height/10}} m</span>
+  <span> PESO &nbsp; &nbsp; {{pokemon.weight/10}} kg</span>
+</div>

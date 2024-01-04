@@ -1,0 +1,15 @@
+<app-header></app-header>
+<main class="container">
+  <app-card [currentPokemon]="pokemon[selected - 1]"></app-card>
+  <div class="cardContainer">
+    @for (poke of pokemon; track poke.id) {
+    <app-item-list
+      [pokemon]="poke"
+      [selectedId]="selected"
+      [id]="poke.id"
+    >
+    </app-item-list>
+    }
+  </div>
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  background: #e2e7c6;
+  border-radius: 50px;
+  width: 90%;
+  margin-left: 50px;
+  gap: 10px;
+}
+
+.selected-item {
+  background-color: #fff7c6;
+  margin-left: 0px;
+}
+
+.pokeball {
+  width: 44px;
+  height: 44px;
+  margin-left: 10px;
+  background: radial-gradient(
+      #e9f6f7 6px 8px,
+      #a3713b 8px 10px,
+      transparent 5px
+    ),
+    linear-gradient(
+      to bottom,
+      #fd5a60 0 20px,
+      #a3713b 21px 24px,
+      #e9f6f7 25px 100%
+    );
+  border-radius: 50%;
+  border: 4px solid #a3713b;
+}
+
+.number {
+  font-size: 5vw;
+  color: #605b54;
+}
+
+.name {
+  font-family: "pokefont", sans-serif;
+  font-size: 5vw;
+  color: #605b54;
+}

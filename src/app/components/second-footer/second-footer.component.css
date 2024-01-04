@@ -1,0 +1,40 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  background-color: #bdff9c;
+  height: 50px;
+  padding-right: 20px;
+  z-index: 1000;
+}
+
+.pp {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #fffbff;
+  font-family: "pokefont", sans-serif;
+  font-size: 2vw;
+  margin-right: 20px;
+}
+
+.kbd {
+  background-color: #fffbff;
+  color: #7d7d96;
+  border-radius: 50%;
+  height: 26px;
+  line-height: 26px;
+  aspect-ratio: 1;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 5px;
+  user-select: none;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.75);
+}
