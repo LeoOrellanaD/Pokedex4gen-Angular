@@ -11,7 +11,6 @@ import { SecondHeaderComponent } from './components/second-header/second-header.
 import { HomeComponent } from './pages/home/home.component';
 import { InformationComponent } from './pages/information/information.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,

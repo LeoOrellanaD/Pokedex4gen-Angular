@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { SecondHeaderComponent } from '../../components/second-header/second-header.component';
 import { SecondFooterComponent } from '../../components/second-footer/second-footer.component';
@@ -24,9 +24,11 @@ export class InformationComponent implements OnInit {
   pokemonList: any[] = [];
   currentPokemonIndex = 0;
 
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
   showNextPokemon() {
     if (this.selectedPokemon.id < this.pokemonList.length) {
-      this.currentPokemonIndex = this.selectedPokemon.id ;
+      this.currentPokemonIndex = this.selectedPokemon.id;
       this.selectedPokemon = this.pokemonList[this.currentPokemonIndex];
       this.SelectSound();
     }
@@ -41,7 +43,7 @@ export class InformationComponent implements OnInit {
   }
 
   goHome() {
-    this.router.navigate(['/'], { state: { pokemon: this.selectedPokemon } });
+    this.router.navigate(['/'], { state: { currentPokemon: this.selectedPokemon.id } });
   }
 
   SelectSound() {
@@ -55,15 +57,12 @@ export class InformationComponent implements OnInit {
   onKeyDown(event: KeyboardEvent) {
     switch (event.key) {
       case 'ArrowUp':
-        //console.log(`Pressed ${event.key}!`);
         this.showPreviousPokemon();
         break;
       case 'ArrowDown':
-       // console.log(`Pressed ${event.key}!`);
         this.showNextPokemon();
         break;
       case 'Enter':
-       // console.log(`Pressed ${event.key}!`);
         this.goHome();
         break;
       default:
@@ -71,8 +70,6 @@ export class InformationComponent implements OnInit {
         break;
     }
   }
-
-  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.selectedPokemon = history.state.pokemon;

@@ -16,7 +16,7 @@ export class DetailComponent {
     grass: '#77c74f',
     poison: '#a040a0',
     normal: '#a8a878',
-    fight: '#c03028',
+    fighting: '#c03028',
     flying: '#a78ef0',
     ground: '#e0c068',
     rock: '#b8a038',
