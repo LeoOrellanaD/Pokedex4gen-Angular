@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PokemonService {
   private baseUrl = 'https://pokeapi.co/api/v2';
-  private numberOfPokemon = 493;
+  
 
   constructor(private http: HttpClient) {}
 

@@ -52,13 +52,14 @@
   padding: 0px 20px;
   border-radius: 5px;
   margin-right: 10px;
-  height: 60px;
+  
   outline: 3px solid #525a58;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); 
 }
 
 
 .type span {
+  display: flex;
   color: #ffffff;
   font-family: "pokefont", sans-serif;
   font-size: 4vw;

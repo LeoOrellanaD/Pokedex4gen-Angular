@@ -1,28 +1,46 @@
 .container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    align-items: center;
-    background: repeating-linear-gradient(
-      to bottom,
-      #77ccf6 0,
-      #5067e8 33.33%,
-      #4c64e9 33.33%,
-      #4c64e9 66.66%,
-      #5067e8 66.66%,
-      #77ccf6 100%
-    );
-    height: calc(100vh - 70px - 20px);
-    overflow: hidden;
-  }
-  
-  .cardContainer {
-    max-height: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    overflow-y: scroll;
-    margin-right: 20px;
-    padding-right: 20px;
-  }
-  
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  background: repeating-linear-gradient(
+    to bottom,
+    #77ccf6 0,
+    #5067e8 33.33%,
+    #4c64e9 33.33%,
+    #4c64e9 66.66%,
+    #5067e8 66.66%,
+    #77ccf6 100%
+  );
+  height: calc(100vh - 70px - 20px);
+  overflow: hidden;
+}
+
+.cardContainer {
+  max-height: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: scroll;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.cardContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cardContainer::-webkit-scrollbar-track {
+  background: 
+    /* Fondo blanco */ linear-gradient(
+    to bottom,
+    #5786a6 0%,
+    #ffffff 100%
+  );
+
+  background-size: 100% 8px;
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+  background-color: #ea2a24;
+}

@@ -90,16 +90,12 @@ export class HomeComponent implements OnInit {
     const requests = [];
 
     for (let i = 1; i <= numberOfPokemon; i++) {
-      requests.push(
-        of(i).pipe(concatMap((id) => this.pokemonService.getPokemonById(id)))
-      );
+      requests.push(this.pokemonService.getPokemonById(i));
     }
 
-    forkJoin(requests)
-      .pipe(map((data) => data.sort((a, b) => a.id - b.id)))
-      .subscribe((data) => {
-        this.pokemon = data;
-      });
+    forkJoin(requests).subscribe((data) => {
+      this.pokemon = data.sort((a, b) => a.id - b.id);
+    });
   }
 
   handleSelectedPokemon() {
